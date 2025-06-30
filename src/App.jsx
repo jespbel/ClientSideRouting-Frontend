@@ -26,12 +26,9 @@ const App = () => {
   return (
     <div>
       <NavBar />
-      <TaskList tasks={tasks} fetchAllTasks={fetchAllTasks} />
-      <AddTask fetchAllTasks={fetchAllTasks} />
       <Routes>
-        {/* Currently, we don't have any routes defined. And you can see above that we're
-            rendering the TaskList and AddTask components directly, no matter what our URL looks like.
-            Let's fix that! */}
+        <Route path="/" elemnent={<TaskList tasks={tasks} fetchAllTasks={fetchAllTasks} />} />
+        <Route path= "/add-task" element={<AddTask/>}/>
       </Routes>
     </div>
   );
